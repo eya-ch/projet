@@ -3,6 +3,10 @@
 
 
 * {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
   padding: 0;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -30,13 +34,17 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 .navbar li {
   display: inline;
   padding: 50px;
+  cursor: pointer;
+
 }
+
 .logo {
   display: flex;
   
 }   
 .logo h4 {
-  padding: 5px;
+ margin-top: 25px;
+ margin-left: 10px;
 }
 a{
   text-decoration: none;
@@ -63,6 +71,7 @@ a{
     position: absolute;
     top: 30%;
     left: 7%;
+   
     
 }
 .text2 {
@@ -71,8 +80,16 @@ a{
   right: 20%;
     
 }
-
-
+  
+.slide {
+  background-image:url(imgs/bg2.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position:center ;
+  background-size: cover;
+  animation: slide 12s infinite;
+  object-fit: cover;
+}
 @keyframes slide {
   40% {
     background: url(imgs/bg4-modif.jpg);
@@ -96,8 +113,59 @@ a{
   }
  
 }
+@media screen and (max-width : 500px) 
+{
+  .slide {
+    width: 95vw;
+    height: 70vh ;
+  }
+  .text1 {
+    width: 40%;
+  }
+  .mission p {
+    margin-top: 10%;
+    width: 100%;
+    font-size: larger ;
+  }
+  .wrapper {
+    margin-top: 40%;
+  }
+ 
+   .Values {
+    width: 100%;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .value hr {
+    width: 45vw;
+  
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .bg {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+  .bgImg1  {
+    background: url(imgs/cat8.webp);
+    background-size:60% 100%;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    background-repeat: no-repeat;
+   
 
-
+  }
+}
+.hsabet {
+  margin-top: 10%;
+  height: 50vh;
+}
 button{
   background-color: white;
   color: black;
@@ -106,9 +174,12 @@ button{
   text-align: center;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 5%;
 
 }
-
+#donateBtn {
+  margin-top: 7%;
+}
 button:hover {
   background-color: #555555;
   color: white;}
@@ -121,10 +192,7 @@ button:hover {
     width: 70%;
     margin-left: 15%; }
 
-.value hr {
-  width: 20vw;
- 
-}
+
 .mission h1 {
   margin-top: 5%;
 }
@@ -562,3 +630,331 @@ width: 100% ;
  .section7 {
   padding: 10%;
  }
+
+ /*respo*/
+ .navigation-mobile{
+  display: none;
+}
+.btn{
+  display: none;
+}
+@media screen and (max-width: 938px) {
+ 
+
+ 
+  .navigation-mobile{
+      position: fixed;
+      right: 0px;
+      top : 60px;
+      display: block; 
+      transform: translateY(120%);
+      background-color: #F5F5DC;
+      padding: 0px 60px;
+      height: calc(103vh - 70px);
+      font-size: 2.5rem;
+      transition: transform 400ms ease;
+      z-index: 999;
+
+  }
+  
+  .navigation-mobile.open{
+      transform: translateY(0px) !important;
+  }
+
+
+  .animation.fa-times{
+      transform: rotate(180deg);
+      transition: transform 300ms ease;
+      
+  }
+  .animation.fa-bars{
+      transform: rotate(0deg);
+      transition: transform 300ms ease;
+    
+
+  }
+  .links{
+   
+    display: none;
+}
+
+
+.btn{
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 60px;
+  cursor: pointer;
+  color: #000;
+      padding-top: 10px;
+  
+}
+ .links2{
+  display: block;
+  color: rgb(168, 159, 159);
+  list-style-type: none;
+
+
+ }
+ .links2 li {
+  padding-top: 20px;
+font-family: sans-serif;
+font-size:medium   ;
+ }
+.btn i{
+  color: #000;
+}
+}
+@media screen and (max-width: 350px) {
+  .navigation-mobile{
+    
+    transform: translateY(180%);
+  
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 941px) {
+
+  .bg {
+   display: block;
+ }
+ .bgImg1 {
+   background-size:60% 100%;
+   width: 170%;
+   height: 58vh;
+ 
+   }
+   .bgImg2{background-size:60% 100%;
+    width: 170%;
+    height: 58vh;
+
+   }
+   .part1 {
+     height: 33vh;
+     width: 45vw;
+   }
+   .part2{
+    height: 33vh;
+     width: 45vw;
+
+   }
+   .adopt{
+ padding: 0px 0 0px 130px;
+   }
+  
+ 
+ 
+ }
+ @media screen and (max-width: 941px) {
+  .adopt{
+    padding: 0px 0 0px 70px;
+      }
+
+
+
+ }
+ @media screen and (max-width: 617px) {
+  .part1 {
+    height: 33vh;
+    width: 50vw;
+  }
+  .part2 {
+    height: 33vh;
+    width: 50vw;
+  }
+
+  
+  .adopt{
+    padding: 0px 0 0px 70px;
+      }
+
+
+
+ }
+ @media screen and (max-width: 557px) {
+  
+  .adopt{
+    padding: 0px 0 0px 20px;
+      }
+      .bgImg2 {
+        width: 100%;
+      }
+      .bg {
+        display: block;
+      }
+
+
+ }
+
+ @media screen and (max-width: 457px) {
+  .part1 {
+    height: 32vh;
+    width: 60vw;
+  }
+  .part2 {
+    height: 32vh;
+    width: 60vw;
+  }
+  
+  .adopt{
+    padding: 0px 0 0px 20px;
+      }
+
+
+
+ }
+ @media screen and (max-width: 377px) {
+ .adopt button {
+  height: 40px;
+  width: 100px;
+  padding: 0px;
+
+
+
+ }
+
+
+ }
+ @media screen and (max-width: 267px) {
+  .part1 {
+    height: 38vh;
+    width: 60vw;
+  }
+  .part2 {
+    height: 38vh;
+    width: 60vw;
+  }
+ 
+  }
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 941px) {
+
+    .bg {
+     display: block;
+   }
+   .bgImg1 {
+     background-size:60% 100%;
+     width: 170%;
+     height: 58vh;
+   
+     }
+     .bgImg2{background-size:60% 100%;
+      width: 170%;
+      height: 58vh;
+      background-repeat: no-repeat;
+  
+     }
+     .part1 {
+       height: 33vh;
+       width: 45vw;
+     }
+     .part2{
+      height: 33vh;
+       width: 45vw;
+  
+     }
+     .adopt{
+   padding: 0px 0 0px 130px;
+     }
+    
+   
+   
+   }
+   @media screen and (max-width: 941px) {
+    .adopt{
+      padding: 0px 0 0px 70px;
+        }
+  
+  
+  
+   }
+   @media screen and (max-width: 617px) {
+    .part1 {
+      height: 33vh;
+      width: 50vw;
+    }
+    .part2 {
+      height: 33vh;
+      width: 50vw;
+    }
+  
+    
+    .adopt{
+      padding: 0px 0 0px 70px;
+        }
+  
+  
+  
+   }
+   @media screen and (max-width: 557px) {
+    
+    .adopt{
+      padding: 0px 0 0px 20px;
+        }
+  
+  
+  
+   }
+  
+   @media screen and (max-width: 457px) {
+    .part1 {
+      height: 32vh;
+      width: 60vw;
+    }
+    .part2 {
+      height: 32vh;
+      width: 60vw;
+    }
+    
+    .adopt{
+      padding: 0px 0 0px 20px;
+        }
+  
+  
+  
+   }
+   @media screen and (max-width: 377px) {
+   .adopt button {
+    height: 40px;
+    width: 100px;
+    padding: 0px;
+  
+  
+  
+   }
+  
+  
+   }
+   @media screen and (max-width: 267px) {
+    .part1 {
+      height: 38vh;
+      width: 60vw;
+    }
+    .part2 {
+      height: 38vh;
+      width: 60vw;
+    }
+   
+    }
